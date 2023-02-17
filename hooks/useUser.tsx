@@ -23,7 +23,7 @@ const useUser = (user: User | null) => {
             const q = query(usersRef, where('email', '==', user?.email))
             getDocs(q)  
                .then((resp) => {
-                    const data: Idata[] = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+                    const data: any = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
                     setDataUser(data[0])
                })
         }
