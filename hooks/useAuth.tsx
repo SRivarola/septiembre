@@ -7,7 +7,7 @@ import { alertError, alertSuccess } from '../constants/alerts'
 interface IAuth {
     user: User | null
     signUp: (email: string, password: string) => Promise<void>
-    signIn: (email: string, password: string) => Promise<void>
+    signIn: (email: any, password: any) => Promise<void>
     logout: () => Promise<void>
     message: string | null
     loading: boolean
